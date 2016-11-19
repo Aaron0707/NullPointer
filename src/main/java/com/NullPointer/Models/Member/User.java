@@ -1,28 +1,25 @@
 package com.NullPointer.Models.Member;
 
+import com.NullPointer.CoreDefine.CoreDefine.AccountType;
 import com.NullPointer.Models.Base.Person;
+import com.sun.istack.internal.NotNull;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 
 /**
  * Created by Aaron on 11/18/16.
  */
 
-enum AccountType {
-    INDIVIDUAL(0), ENTERPRISE(1);
-    private int n_code;
-
-    AccountType(int n_code) {
-        this.n_code = n_code;
-    }
-}
 
 @Entity
 public class User extends Person {
+    @NotNull
+    @Column(unique = true)
     private String          account;
+    @NotNull
     private String          passWord;
-    private LanguageType    languageType;
-    private AccountType     accountType;
+    private AccountType accountType;
     private boolean         isEngineer;
     private long            engineerId;
 
@@ -40,14 +37,6 @@ public class User extends Person {
 
     public void setPassWord(String passWord) {
         this.passWord = passWord;
-    }
-
-    public LanguageType getLanguageType() {
-        return languageType;
-    }
-
-    public void setLanguageType(LanguageType languageType) {
-        this.languageType = languageType;
     }
 
     public AccountType getAccountType() {

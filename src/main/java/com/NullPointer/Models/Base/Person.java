@@ -1,27 +1,17 @@
 package com.NullPointer.Models.Base;
 
 
-import com.NullPointer.CoreDefine.coreDefine;
-
-import javax.persistence.Column;
-import javax.persistence.Transient;
+import javax.persistence.MappedSuperclass;
+import com.NullPointer.CoreDefine.CoreDefine.Gender;
 
 /**
  * Created by Aaron on 11/18/16.
  */
 
-enum Gender{
-    male(0),female(1);
-
-    private int n_code;
-
-    private Gender(int n_code){
-        this.n_code = n_code;
-    }
-}
-
+@MappedSuperclass
 public class Person extends BaseModel {
     private String      firstName;
+    private String      middleName;
     private String      lastName;
     private String      email;
     private Integer     age;
@@ -84,5 +74,13 @@ public class Person extends BaseModel {
 
     public void setProfilePhotoUrl(String profilePhotoUrl) {
         this.profilePhotoUrl = profilePhotoUrl;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
     }
 }

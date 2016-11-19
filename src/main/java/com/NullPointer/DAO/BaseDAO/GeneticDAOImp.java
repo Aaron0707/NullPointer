@@ -6,6 +6,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+import java.io.ObjectInputStream;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.List;
@@ -15,7 +17,6 @@ import java.util.Map;
 /**
  * Created by annezhao on 9/19/16.
  */
-@Repository
 public class GeneticDAOImp<T extends BaseModel> implements IGeneticDAO<T> {
     @Autowired
     private SessionFactory sessionFactory;
