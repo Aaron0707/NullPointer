@@ -57,6 +57,6 @@ public class IndexController {
 
     @RequestMapping(value = "/documentation",method = RequestMethod.GET)
     public String documentation(){
-        return "/Documentation/documentation.html";
+        return "Documentation/Documentation.html";
     }
 }
