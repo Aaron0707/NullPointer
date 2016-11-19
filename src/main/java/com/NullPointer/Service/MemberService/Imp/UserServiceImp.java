@@ -19,14 +19,13 @@ public class UserServiceImp implements IUserService {
     private IUserDAO userDAO;
 
     public User login(User user) {
-        User tempUser = userDAO.findByAccount(user.getAccount());
-        return null;
+        return userDAO.findByAccount(user.getAccount());
     }
 
     public User signUp(User user) {
         String email = user.getEmail();
-
-        if (email.length() == 0) {
+        String password = user.getPassword();
+        if (email==null || email.length() == 0 || password==null || password.length()==0) {
             return null;
         }
 
@@ -34,7 +33,6 @@ public class UserServiceImp implements IUserService {
         user.setEngineer(false);
         user.setAccountType(AccountType.INDIVIDUAL);
         userDAO.insert(user);
-
         return user;
     }
 }

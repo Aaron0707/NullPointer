@@ -26,6 +26,7 @@ public class User extends Person {
     public String getAccount() {
         return account;
     }
+
     public void setAccount(String account) {
         this.account = account;
     }
@@ -40,6 +41,7 @@ public class User extends Person {
     public AccountType getAccountType() {
         return accountType;
     }
+
     public void setAccountType(AccountType accountType) {
         this.accountType = accountType;
     }
@@ -47,6 +49,7 @@ public class User extends Person {
     public boolean isEngineer() {
         return isEngineer;
     }
+
     public void setEngineer(boolean engineer) {
         isEngineer = engineer;
     }
@@ -54,6 +57,7 @@ public class User extends Person {
     public long getEngineerId() {
         return engineerId;
     }
+
     public void setEngineerId(long engineerId) {
         this.engineerId = engineerId;
     }
