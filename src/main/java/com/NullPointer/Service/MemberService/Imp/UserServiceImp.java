@@ -19,7 +19,7 @@ public class UserServiceImp implements IUserService {
     private IUserDAO userDAO;
 
     public User login(User user) {
-
+        User tempUser = userDAO.findByAccount(user.getAccount());
         return null;
     }
 

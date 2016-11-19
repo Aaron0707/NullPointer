@@ -11,4 +11,10 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class UserDAOImp extends GeneticDAOImp<User> implements IUserDAO {
 
+    public User findByAccount(String account) {
+
+        String sql = "select * from User";
+
+        return null;
+    }
 }
