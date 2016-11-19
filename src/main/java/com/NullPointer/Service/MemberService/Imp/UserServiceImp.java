@@ -39,7 +39,7 @@ public class UserServiceImp implements IUserService {
     public User updateProfile(User user) {
         long userId = user.getID();
 
-        userDAO.updateById(userId);
+//        userDAO.updateById(userId);
 
         return user;
     }

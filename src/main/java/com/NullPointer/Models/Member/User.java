@@ -22,6 +22,7 @@ public class User extends Person {
     private AccountType     accountType;
     private boolean         isEngineer;
     private long            engineerId;
+    private boolean         isActive;
 
     public String getAccount() {
         return account;
@@ -60,5 +61,13 @@ public class User extends Person {
 
     public void setEngineerId(long engineerId) {
         this.engineerId = engineerId;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
     }
 }

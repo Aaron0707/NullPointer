@@ -13,6 +13,5 @@ public interface IGeneticDAO <T extends BaseModel> {
     public T findById(long id);
     public List<T> findAll();
     public void deleteById(long id);
-    public void updateById(long id);
     public void updateByObject(T t);
 }

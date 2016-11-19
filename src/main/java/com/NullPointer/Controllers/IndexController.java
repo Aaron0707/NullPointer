@@ -32,6 +32,7 @@ public class IndexController {
         return "html/signup.html";
     }
 
+
     @RequestMapping(value = "/login", method = RequestMethod.POST,consumes="application/json")
     public String login(@RequestBody User user) {
         User resultUser = userService.login(user);
@@ -50,5 +51,12 @@ public class IndexController {
         }else {
             return "html/signup.html";
         }
+    }
+
+
+
+    @RequestMapping(value = "/documentation",method = RequestMethod.GET)
+    public String documentation(){
+        return "/Documentation/documentation.html";
     }
 }

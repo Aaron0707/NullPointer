@@ -39,11 +39,6 @@ public class GeneticDAOImp<T extends BaseModel> implements IGeneticDAO<T> {
         getCurrentSession().saveOrUpdate(t);
     }
 
-    public void updateById(long id) {
-        T t = (T) getCurrentSession().get(entityClass.getName(), id);
-        getCurrentSession().saveOrUpdate(t);
-    }
-
     public void deleteById(long id) {
         T t = (T) getCurrentSession().get(entityClass.getName(), id);
         if (t != null)
