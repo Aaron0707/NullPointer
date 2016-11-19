@@ -3,7 +3,6 @@ package com.NullPointer.Models.Base;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import com.NullPointer.CoreDefine.*;
 
 /**
  * Created by Aaron on 11/18/16.
@@ -14,12 +13,12 @@ public class BaseModel implements Serializable {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(nullable = false)
     private long ID;
 
     private String updateTime;
 
-    private String creatTime;
+    private String createTime;
 
     private String updateMark;
 
@@ -39,12 +38,12 @@ public class BaseModel implements Serializable {
         this.updateTime = updateTime;
     }
 
-    public String getCreatTime() {
-        return creatTime;
+    public String getCreateTime() {
+        return createTime;
     }
 
-    public void setCreatTime(String creatTime) {
-        this.creatTime = creatTime;
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
     }
 
     public String getUpdateMark() {

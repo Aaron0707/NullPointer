@@ -24,15 +24,15 @@ public class UserServiceImp implements IUserService {
     }
 
     public User signUp(User user) {
-
         String email = user.getEmail();
-        if (email.length()==0){
+
+        if (email.length() == 0) {
             return null;
         }
+
         user.setAccount(user.getEmail());
         user.setEngineer(false);
         user.setAccountType(AccountType.INDIVIDUAL);
-
         userDAO.insert(user);
 
         return user;

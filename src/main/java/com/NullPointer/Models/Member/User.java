@@ -18,31 +18,28 @@ public class User extends Person {
     @Column(unique = true)
     private String          account;
     @NotNull
-    private String          passWord;
-    private AccountType accountType;
+    private String          password;
+    private AccountType     accountType;
     private boolean         isEngineer;
     private long            engineerId;
 
     public String getAccount() {
         return account;
     }
-
     public void setAccount(String account) {
         this.account = account;
     }
 
-    public String getPassWord() {
-        return passWord;
+    public String getPassword() {
+        return password;
     }
-
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public AccountType getAccountType() {
         return accountType;
     }
-
     public void setAccountType(AccountType accountType) {
         this.accountType = accountType;
     }
@@ -50,7 +47,6 @@ public class User extends Person {
     public boolean isEngineer() {
         return isEngineer;
     }
-
     public void setEngineer(boolean engineer) {
         isEngineer = engineer;
     }
@@ -58,7 +54,6 @@ public class User extends Person {
     public long getEngineerId() {
         return engineerId;
     }
-
     public void setEngineerId(long engineerId) {
         this.engineerId = engineerId;
     }
