@@ -35,4 +35,12 @@ public class UserServiceImp implements IUserService {
         userDAO.insert(user);
         return user;
     }
+
+    public User updateProfile(User user) {
+        long userId = user.getID();
+
+        userDAO.updateById(userId);
+
+        return user;
+    }
 }
