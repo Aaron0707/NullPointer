@@ -4,6 +4,7 @@ import com.NullPointer.Models.Member.Engineer;
 import com.NullPointer.Models.Member.User;
 import com.NullPointer.Service.MemberService.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,7 +31,7 @@ public class IndexController {
         return "html/signup.html";
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @RequestMapping(value = "/login", method = RequestMethod.POST,consumes="application/json")
     public String login(@RequestBody User user) {
         User resultUser = userService.login(user);
         if (resultUser!=null) {
@@ -41,8 +42,8 @@ public class IndexController {
     }
 
     @RequestMapping(value = "/signup", method = RequestMethod.POST)
-    public String signup(User user) {
-       User resultUser =  userService.signUp(user);
+    public String signup(@RequestBody User user) {
+        User resultUser =  userService.signUp(user);
         if (resultUser!=null) {
             return "html/profile.html";
         }else {
