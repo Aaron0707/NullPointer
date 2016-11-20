@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 
 /**
  * Created by Aaron on 11/19/16.
+ * Email: aaronyang.memory@gmail.com
  */
 @Entity
 public class Team extends BaseModel {

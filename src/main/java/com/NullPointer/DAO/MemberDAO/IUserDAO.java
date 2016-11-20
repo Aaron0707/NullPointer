@@ -7,5 +7,6 @@ import com.NullPointer.Models.Member.User;
  * Created by Aaron on 11/18/16.
  */
 public interface IUserDAO extends IGeneticDAO<User> {
-    public User findByAccount(String account);
+
+    User findByAccount(String account);
 }

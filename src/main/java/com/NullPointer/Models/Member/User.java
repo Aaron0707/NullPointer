@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 
 /**
  * Created by Aaron on 11/18/16.
+ * Email: aaronyang.memory@gmail.com
  */
 
 

@@ -6,6 +6,7 @@ import com.NullPointer.CoreDefine.CoreDefine.Gender;
 
 /**
  * Created by Aaron on 11/18/16.
+ * Email: aaronyang.memory@gmail.com
  */
 
 @MappedSuperclass

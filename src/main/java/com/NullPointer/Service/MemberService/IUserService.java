@@ -1,11 +1,11 @@
 package com.NullPointer.Service.MemberService;
 
-import com.NullPointer.DAO.MemberDAO.IUserDAO;
 import com.NullPointer.Models.Member.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.NullPointer.Models.Member.UserLogInfo;
 
 /**
  * Created by Aaron on 11/18/16.
+ * Email: aaronyang.memory@gmail.com
  */
 public interface IUserService {
     /**
@@ -13,14 +13,14 @@ public interface IUserService {
      * @param user
      * @return User object or null
      */
-    public User login(User user);
+    UserLogInfo login(User user);
 
-    public User signUp(User user);
+    User signUp(User user);
 
     /**
      * allows user to modify profile information
      * @param user
      * @return User object
      */
-    public User updateProfile(User user);
+    User updateProfile(User user);
 }

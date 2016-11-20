@@ -16,7 +16,7 @@ public class UserDAOImp extends GeneticDAOImp<User> implements IUserDAO {
 
     public User findByAccount(String account) {
 
-        String sql = "select * from User where account = "+account;
+        String sql = "select * from User where account = 222211111";
         SQLQuery query =  super.getCurrentSession().createSQLQuery(sql);
         query.addEntity(User.class);
         List userList = query.list();

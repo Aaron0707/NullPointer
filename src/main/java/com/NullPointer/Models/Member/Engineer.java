@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import com.NullPointer.CoreDefine.CoreDefine.*;
 /**
  * Created by Aaron on 11/18/16.
+ * Email: aaronyang.memory@gmail.com
  */
 
 @Entity

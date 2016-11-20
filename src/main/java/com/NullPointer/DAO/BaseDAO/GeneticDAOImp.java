@@ -16,6 +16,7 @@ import java.util.Map;
 
 /**
  * Created by annezhao on 9/19/16.
+ * Email: aaronyang.memory@gmail.com
  */
 public class GeneticDAOImp<T extends BaseModel> implements IGeneticDAO<T> {
     @Autowired

@@ -1,9 +1,11 @@
-
 /**
  * Created by Aaron on 11/18/16.
+ * Email: aaronyang.memory@gmail.com
  */
 package com.NullPointer.configuration;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
@@ -25,6 +27,14 @@ public class AppInitializer implements WebApplicationInitializer {
 
 		servlet.setLoadOnStartup(1);
 		servlet.addMapping("/");
+
+
+
+//		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
+//		ctx.register(RedisConfig.class);
+//		ctx.refresh();
+
+
 	}
 
 }

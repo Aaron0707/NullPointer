@@ -16,6 +16,12 @@ dependencies {
     compile 'org.springframework:spring-webmvc:4.2.2.RELEASE'
     compile 'org.springframework.data:spring-data-jpa:1.2.0.RELEASE'
 
+    //redis dependencies
+    compile 'org.springframework.boot:spring-boot-starter:1.2.0.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-redis:1.2.0.RELEASE'
+    compile 'org.springframework.data:spring-data-commons:1.9.1.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-security:1.2.0.RELEASE'
+
     compile 'org.hibernate:hibernate-core:4.1.7.Final'
     compile 'org.hibernate:hibernate-entitymanager:3.6.10.Final'
     compile 'org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.0.Final'
@@ -31,5 +37,6 @@ dependencies {
             [group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.4.1'],
             [group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.4.1']
     )
+    compile group: 'redis.clients', name: 'jedis', version: '2.6.2'
 }
 

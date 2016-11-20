@@ -7,6 +7,7 @@ import java.util.List;
 
 /**
  * Created by annezhao on 9/19/16.
+ * Email: aaronyang.memory@gmail.com
  */
 public interface IGeneticDAO <T extends BaseModel> {
     public void insert(T t);

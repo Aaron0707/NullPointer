@@ -6,6 +6,7 @@ import java.io.Serializable;
 
 /**
  * Created by Aaron on 11/18/16.
+ * Email: aaronyang.memory@gmail.com
  */
 
 @MappedSuperclass
