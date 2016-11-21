@@ -5,6 +5,7 @@ import com.NullPointer.Models.Member.Engineer;
 import com.NullPointer.Models.Member.User;
 import com.NullPointer.Models.Member.UserLogInfo;
 import com.NullPointer.Service.MemberService.IUserService;
+import com.NullPointer.Utils.NpUtil;
 import com.NullPointer.Utils.RedisUtil;
 import com.NullPointer.Utils.SerializeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import redis.clients.jedis.Jedis;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by Aaron on 11/18/16.
@@ -44,7 +48,7 @@ public class IndexController {
     public String login(@RequestBody User user) {
         UserLogInfo resultUser = userService.login(user);
         if (resultUser!=null) {
-            return "html/profile.html";
+            return NpUtil.requestMap(resultUser);
         }else {
             return "html/signup.html";
         }

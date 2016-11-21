@@ -92,4 +92,12 @@ public final class RedisUtil {
         returnResource(jedis);
         return l;
     }
+
+    public static byte[] get(String token) {
+        Jedis jedis = getJedis();
+        if (jedis==null){
+            return null;
+        }
+        return jedis.get(token.getBytes());
+    }
 }
