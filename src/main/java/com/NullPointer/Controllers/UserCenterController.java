@@ -25,6 +25,7 @@ public class UserCenterController {
     public String modifyUser(@RequestBody User user) {
         User resultUser = userService.updateProfile(user);
 
-        return "html/profile.html";
+//        return "html/profile.html";
+        return null;
     }
 }

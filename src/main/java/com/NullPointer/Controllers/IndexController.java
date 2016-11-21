@@ -35,13 +35,15 @@ public class IndexController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String homePage() {
-        return "html/index.html";
+//        return "html/index.html";
+        return null;
     }
 
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login() {
-        return "html/login.html";
+//        return "html/login.html";
+        return null;
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
@@ -50,7 +52,8 @@ public class IndexController {
         if (resultUser!=null) {
             return NpUtil.requestMap(resultUser);
         }else {
-            return "html/signup.html";
+//            return "html/signup.html";
+            return null;
         }
     }
 
@@ -58,14 +61,17 @@ public class IndexController {
     public String signup(@RequestBody User user) {
         User resultUser =  userService.signUp(user);
         if (resultUser!=null) {
-            return "html/profile.html";
+//            return "html/profile.html";
+            return null;
         }else {
-            return "html/signup.html";
+//            return "html/signup.html";
+            return null;
         }
     }
 
     @RequestMapping(value = "/documentation",method = RequestMethod.GET)
     public String documentation(){
-        return "Documentation/Documentation.html";
+//        return "Documentation/Documentation.html";
+        return null;
     }
 }
