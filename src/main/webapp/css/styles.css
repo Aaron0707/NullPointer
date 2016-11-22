@@ -1,20 +1,68 @@
-.index_body {
-    background: url("../img/index_bg.jpg") no-repeat;
-    background-position-y: 50px;
-    background-size: cover;
-}
-
-.navbar-inverse {
-    -webkit-box-shadow: 0 8px 6px -6px #999;
-    -moz-box-shadow: 0 8px 6px -6px #999;
-    box-shadow: 0 8px 6px -6px #999;
-}
-
 .page_bottom_anchor {
-    position: absolute;
-    bottom: 20px;
-    left: 48%;
+    margin-top: -80px;
+    font-size: 1.6em;
 }
+
+.parallax {
+    min-height: 100vh;
+    background-size: cover;
+    background: url("../img/index_bg.png") no-repeat fixed center;
+    text-align: center;
+}
+
+.centered_title {
+    text-align: center;
+}
+
+.large_title p{
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Anton', "Arial Black", sans-serif;
+}
+
+.index_body .centered_title {
+    margin-top: 130px;
+}
+
+.text_decorator {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.plain_text p {
+    margin: 20px 150px 0 150px;
+    text-align: justify;
+}
+
+#index_slogan, .copyright{
+    color: white;
+    position: relative;
+    padding-top: 23%;
+    font-family: 'Anton', "Arial Black", sans-serif;
+    text-shadow: #2c3e50 1px 1px 2px;
+    margin-top: 0px;
+}
+
+.copyright {
+    font-size: 20px;
+    position: absolute;
+    bottom: 50px;
+    right: 30px;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+.index_body .navbar .nav > li > a,
+.index_body .navbar .nav > li.current-menu-item > a,
+.index_body .navbar .nav > li.current-menu-ancestor > a,
+.index_body .navbar .navbar-header .navbar-brand {
+    color: #ffffff;
+    text-shadow: #2c3e50 1px 1px 1px;
+}
+
 
 
 
